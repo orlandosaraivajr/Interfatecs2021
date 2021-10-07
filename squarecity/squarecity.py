@@ -1,3 +1,4 @@
+import math
 x = int(input(''))
 
 M = []
@@ -7,18 +8,17 @@ for i in range(x):
         linha.append('0')
     M.append(linha)
 
-C = round(x/2)-1
-
+c = math.ceil(x/2)-1
 for i in range(x):
     for j in range(x):
-        D = max(abs(i-C),abs(j-C))
+        D = max(abs(i-c),abs(j-c))
         M[i][j] = D
 
 
-#for i in range(N):
+#for i in range(x):
 #    print(M[i])
 
-CONT = 0 
+cont = 0 
 for i in range(x):
     for j in range(x):
         if M[i][j] % 2 != 0:
@@ -30,9 +30,9 @@ for i in range(x):
             M[i][j] = 'A'
 
         if M[i][j] == 'C':
-            CONT = CONT + 1
+            cont = cont + 1
 
-#for i in range(N):
-    #print(M[i])
+#for i in range(x):
+#    print(M[i])
 
-print(CONT)
+print(cont)
