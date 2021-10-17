@@ -10,9 +10,8 @@ int seleciona(int a, int b) {
 }
 
 int main() {
-    int nc, a, b;
+    int a, b;
 
-    cin >> nc;
     while(cin >> a >> b)
 		cout << seleciona(a, b) << endl;
     return 0;

@@ -16,7 +16,7 @@ public class industria_magica {
                 break;
             else {
                 String[] linha = str.split(" ");
-                bw.write(seleciona(Integer.parseInt(linha[0]), Integer.parseInt(linha[1])));
+				bw.write(seleciona(Integer.parseInt(linha[0]), Integer.parseInt(linha[1])));
                 bw.flush();
             }
         }
