@@ -1,0 +1,41 @@
+Programando o Resgate
+
+“A tarefa é simples: temos que sair sem ser visto!” (TeamBrabo)
+
+Uma equipe de resgate precisa de apoio para planejar o salvamento de reféns. É preciso saber se um resgate sem enfrentamento é possível. Para isso, a equipe busca ajuda técnica para o desenvolvimento de um algoritmo capaz de responder essa pergunta rapidamente.  
+
+A ideia é que a partir de um número N de cômodos de um determinado local, seja possível dizer se é ou não possível traçar uma rota do cômodo R, onde os reféns estão localizados, até o cômodo S, que dá acesso à saída. Claro, que tudo isso deve ser feito evitando os cômodos onde existem terroristas. Com base nesses dados e na especificação de acesso (portas) entre os cômodos, o TeamBrabo pede apoio para o resgate dos próximos inocentes.
+
+Entrada
+
+A primeira linha da entrada contém a quantidade 3 <= N <= 50 de cômodos, o número 1 <= R <= N que identifica a localização dos reféns e o número 1 <= S <= N que identifica a localização do cômodo de saída. Em seguida segue o valor de 1 <= T <= N que especifica  quantidade de cômodos com terroristas, sendo listados na próxima linha os T números representando cada um dos cômodos com a presença de terroristas. Por fim, segue a especificação da quantidade de 1 <= P <= N * (N-1) / 2  de portas, ou seja, dos acesso entre os cômodos, seguido de P linhas contendo um par de números representando a existência de uma passagem entre os cômodos.
+
+Saída
+
+Na saída deve ser impresso uma linha contendo “ABORTAR”, caso não seja possível um resgate sem enfrentamento ou “PROSSEGUIR”, caso seja possível ir até o cômodo de saída sem ter contato com os terroristas.
+
+Exemplo de entrada e Saída
+
+5 5 4 
+1
+2
+3
+5 3
+3 2
+1 4
+
+ABORTAR
+
+6 1 6
+2
+2 3
+7
+1 2
+1 4
+2 3
+2 5
+3 6
+4 5
+5 6
+ 
+PROSSEGUIR
