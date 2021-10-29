@@ -37,12 +37,16 @@ vector<Node*> get_sucessors(Node *nd) {
 	return s;
 }
 
+void logg(string aux, Node *nd) {
+	cout << aux << "\t(" << nd->r << "," << nd->c << ")\n"; 
+}
+
 Node* find_path(Node *origin, Node *target) {
 	Node *nd;
 	vector<Node*> sus, fringe;
 	fringe.push_back(origin);
 	while(true) {
-		if (fringe.empty())
+		if (fringe.empty()) 
 			return NULL;
 		nd = fringe.back();
 		fringe.pop_back();
@@ -51,9 +55,11 @@ Node* find_path(Node *origin, Node *target) {
 		if (!just_visited(nd)) {
 			visited.push_back(nd);
 			sus = get_sucessors(nd);
-			for (int i = 0; i < sus.size(); i++)
+			for (int i = 0; i < sus.size(); i++) 
 				fringe.push_back(sus[i]);
 		}
+		else
+			delete nd;
 	}
 }
 
